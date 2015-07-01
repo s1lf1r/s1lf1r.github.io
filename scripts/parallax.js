@@ -1,7 +1,7 @@
 // Globale Variablen
 var fensterHoehe = 0,
 	seitenHoehe = 0,
-	bewegungsTeiler = 2.3;	// Die Verschiebung der Hintergrundebene entspricht der gescrollten Hoehe geteilt durch diesen Wert.
+	bewegungsTeiler = 1.4;	// Die Verschiebung der Hintergrundebene entspricht der gescrollten Hoehe geteilt durch diesen Wert.
 							// bewegungsTeiler = 1.1	<- schnelle Geschwindigkeit
 							// bewegungsTeiler >= 2		<- maessige Geschwindigkeit
 							// bewegungsTeiler < 1		<- komische Geschwindigkeit
