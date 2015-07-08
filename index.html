@@ -1,67 +1,16 @@
-<!DOCTYPE html>
 <html>
-	<head>
-		<link type="text/css" rel="stylesheet" href="scripts\materialize\css\materialize.min.css"  media="screen,projection"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
-    <body>
-		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-		<script type="text/javascript" src="scripts/materialize/js/materialize.min.js"></script>
-		<script type="text/javascript" src="scripts/index.js"></script>
+	<head ng-app="lws">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css"  media="screen,projection"/>
+	</head>
+	<body>
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+		<script src="lws.js"></script>
 		<div class="container">
-			<div class="card-panel blue lighten-1"><center><h1 class="white-text">Jan Ihmels</h1></center></div>
-			<div class="row">
-				<div class="col s6 m4 l3 blue lighten-3">
-					<div class="container">
-						<p><span class="blue lighten-3 blue-text text-lighten-3"><b>JI</b></span></p>
-						<h3 class="white-text">Navbereich</h3>
-						<br/>
-						<h5 class="divider"></h5>
-						<br/>
-						<h5 class="white-text"> Bio </h5>
-						<br/>
-						<h5 class="divider"></h5>
-						<br/>
-						<h5 class="white-text"> Mein Werdegang </h5>
-						<br/>
-						<h5 class="divider"></h5>
-						<br/>
-						<h5 class="white-text"> Lebenslauf </h5>
-						<br/>
-						<h5 class="divider"></h5>
-						<br/>
-						<h5 class="white-text"> CV </h5>
-						<br/>
-						<h5 class="divider"></h5>
-						<br/>
-					</div>
-				</div>
-				<div class="col s6 m8 l9">
-					<div class="row">
-						<a><div class="waves-effect waves-light col s4 l4 m4 blue lighten-3"><center><p><b class="white-text">Menuepunkt 1</b></p></center></div></a>
-						<a><div class="waves-effect waves-light col s4 l4 m4 blue lighten-3"><center><p><b class="white-text">Menuepunkt 2</b></p></center></div></a>
-						<a><div class="waves-effect waves-light col s4 l4 m4 blue lighten-3"><center><p><b class="white-text">Menuepunkt 3</b></p></center></div></a>
-					</div>
-					<!--<div class="container">-->
-						<div class="card blue flow-text">
-							<div class="container">
-								<div class="card-title white-text"><h3>Warum ich?</h3>
-									<p class="divider"/>
-									<p>Weil ich...<p>
-									<p>&rarr; ...cool bin!</p>
-									<p>&rarr; ...grosse Erfahrung habe.</p>
-									<p>&rarr; ...ihrem Unternehmen viel positves bringen kann.</p>
-									<p>&rarr; ...ich ein Teamplayer bin.</p> 
-									<p>&rarr; ...ich mit Kunden umgehen kann</p>
-									<p>&rarr; ...ich sehr schnell lerne</p>
-									<p class="divider"/>
-								</div>
-							</div>
-						</div>
-					<!--</div>-->
-				</div>
-			</div>					
+		<div class="card-panel teal lighten-1 white-text"><h1>Longest Weird Substring</h1></div>
+		<div class ="col l4" id="myFormAnzahl">Anzahl:&#9;&#9;<input  id="anzahl" type="text"></input></div><br/>
+		<div class= "col l4" id="myForm"></div>
 		</div>
 	</body>
-  </html>
- 
+</html>
