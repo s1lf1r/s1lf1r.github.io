@@ -1,4 +1,3 @@
-var lsw = angular.module("lws", []);
 var oldAnz = 0;
 $(document).ready(function() {
 	$("#anzahl").keyup(function() {
