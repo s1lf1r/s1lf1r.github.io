@@ -14,7 +14,7 @@ $(document).ready(function() {
 			var cn = "text";
 			newForm.type = "text";
 			newForm.className = "text";
-			$("#myForm").append("<b class=\"teal-text\">String " +(i+1) + ":</b></span>");
+			$("#myForm").append("<b>String " +(i+1) + ":</b></span>");
 			$("#myForm").append(newForm);
 			$("#myForm").append(newBreak);
 			
