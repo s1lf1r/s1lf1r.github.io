@@ -13,8 +13,8 @@ $(document).ready(function() {
 			var newBreak2 = document.createElement("br");
 			var cn = "text";
 			newForm.type = "text";
-			newForm.className = "col l4 text";
-			$("#myForm").append("<b>String " +(i+1) + "</b>");
+			newForm.className = "text";
+			$("#myForm").append("<b class=\"teal-text\">String " +(i+1) + ":</b></span>");
 			$("#myForm").append(newForm);
 			$("#myForm").append(newBreak);
 			
@@ -23,7 +23,7 @@ $(document).ready(function() {
 			$(this).next(".texti").remove();
 			$(this).next(".brexi").remove();
 			var val = $(this).val();
-			var newText = "       <span class=\"texti\">Ergebnis:  " + lwsarray(val) + "</span><br class=\"brexi\">";
+			var newText = "       <b class=\"teal-text texti\">Ergebnis:  " + lwsarray(val) + "</b><br class=\"brexi\">";
 			$(this).after(newText);
 		});
 	});
