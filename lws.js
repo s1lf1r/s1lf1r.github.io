@@ -6,7 +6,7 @@ $(document).ready(function() {
 		var i=0;
 		$("#myForm input").remove();
 		$("#myForm br").remove();
-		$("#myForm span").remove()
+		$("#myForm b").remove()
 		for (i=0;i<anz;i++) {
 			var newForm = document.createElement("input");
 			var newBreak = document.createElement("br");
@@ -14,7 +14,7 @@ $(document).ready(function() {
 			var cn = "text";
 			newForm.type = "text";
 			newForm.className = "col l4 text";
-			$("#myForm").append("<span><b>String " +(i+1) +": &#9;</b></span>");
+			$("#myForm").append("<b>String " +(i+1) +": &#9;</b>");
 			$("#myForm").append(newForm);
 			$("#myForm").append(newBreak);
 			
