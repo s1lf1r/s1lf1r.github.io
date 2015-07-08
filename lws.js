@@ -14,7 +14,7 @@ $(document).ready(function() {
 			var cn = "text";
 			newForm.type = "text";
 			newForm.className = "col l4 text";
-			$("#myForm").append("<b>String " +(i+1) +": &#9;</b>");
+			$("#myForm").append("<b>String " +(i+1) + "</b>");
 			$("#myForm").append(newForm);
 			$("#myForm").append(newBreak);
 			
