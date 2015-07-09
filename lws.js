@@ -22,7 +22,7 @@ $(document).ready(function() {
 			$(this).next(".texti").remove();
 			$(this).next(".brexi").remove();
 			var val = $(this).val();
-			var newText = "       <b class=\"teal-text texti\">Ergebnis:  " + lwsarray(val) + "</b><br class=\"brexi\">";
+			var newText = "       <b class=\"teal-text texti\">Result:  " + lwsarray(val) + "</b><br class=\"brexi\">";
 			$(this).after(newText);
 		});
 	});
