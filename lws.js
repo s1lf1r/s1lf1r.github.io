@@ -1,4 +1,3 @@
-var oldAnz = 0;
 $(document).ready(function() {
 	$("#anzahl").keyup(function() {
 		var anz = $("#anzahl").val();
