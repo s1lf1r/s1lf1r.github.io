@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	$("#anzahl").keyup(function() {
 		var anz = $("#anzahl").val();
-		var regi=/[0-9]/
+		var regi=/[0-9]$/
 		var booli = regi.test(anz)
 		len = anz.length;
 		console.log(len);
