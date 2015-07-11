@@ -1,17 +1,217 @@
 <html>
 	<head>
 		<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css"  media="screen,projection"/>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	</head>
 	<body>
 		<script src="http://code.jquery.com/jquery-latest.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
-		<script src="lws.js"></script>
-		<br/>
-		<div class="container">
-			<div class="row"><div class="card-panel teal lighten-1 white-text col l6 offset-l3 center-align"><h3>Longest Weird Substring</h3></div></div><br/>
-			<div class="row"><div class = "col l3 offset-l3" id="myFormAnzahl"><b>Quantity of strings:</b><input  id="anzahl" type="text"></input></div></div>
-			<div class="row"><div class = "col l3 offset-l3" id="myForm"></div></div>
-		</div>		
+		<script src="javascript\lws.js"></script>
+		<div class = "container">
+			<div class="row"></div>
+			<div class="row"></div>
+			<div class="row"></div>
+			<div class="row"></div>
+			<div class="row">
+				<div class="col l6 offset-l3">
+					<ul class="collapsible popout">
+						<li>
+							<div class="collapsible-header active teal darken-2 white-text"><i class="material-icons">perm_identity</i><p>How about: ME!</p></div>
+							<div class="collapsible-body flow-text container"><br/>
+								Hi, folks, this is Jan!<br/>
+								I am looking for an apprenticeship as an IT specialist.<br/><br/>
+								So why take me?<br/>
+								<blockquote style="border-left: 5px solid #26a69a">
+									<i class="tiny material-icons teal-text">label_outline</i>&nbsp;I have a lot of experience!<br/>
+									<i class="tiny material-icons teal-text">label_outline</i>&nbsp;I learn fast!<br/>
+									<i class="tiny material-icons teal-text">label_outline</i>&nbsp;I am already familiar with quite<br/>&nbsp;&nbsp;&nbsp;a few programming languages!<br/>
+									<i class="tiny material-icons teal-text">label_outline</i>&nbsp;I am a team player!<br/>
+									<i class="tiny material-icons teal-text">label_outline</i>&nbsp;But I can also be responsible for<br/>&nbsp;&nbsp;&nbsp;my own work!
+								</blockquote>
+								<br/>
+								Programming languages</br>
+								<blockquote style="border-left: 5px solid #26a69a">
+									<i class="tiny material-icons teal-text">label_outline</i>&nbsp;Started out with Basic.<br/>
+									<i class="tiny material-icons teal-text">label_outline</i>&nbsp;VBA, Qbasic, VB.<br/>
+									<i class="tiny material-icons teal-text">label_outline</i>&nbsp;In school we used Pascal.<br/>
+									<i class="tiny material-icons teal-text">label_outline</i>&nbsp;In university I was taught<br/>
+									<i class="tiny material-icons teal-text">label_outline</i>&nbsp;Java, C.<br/>
+									<i class="tiny material-icons teal-text">label_outline</i>&nbsp;Since I'm looking for a job<br/>									
+									<i class="tiny material-icons teal-text">label_outline</i>&nbsp;Javascript, Materialize, jQuery<br/>
+								</blockquote>
+								<br/>
+								Below you can find some coding example. It uses Javascript, Materialize and jQuery. The exercise is taken from codechef.com. <br/>
+								<br/>
+								Have fun reading it. There is quite a bit more to find out about me below, so don't be shy!<br/><br/>
+							</div>
+						</li>
+						<li>
+							<div class="collapsible-header teal darken-2 white-text"><i class="material-icons">subject</i><p>Codechef: Longest Weird Substring</p></div>
+							<div class="collapsible-body">
+								<div class="container">
+									<div class="row"><div class="card-panel teal lighten-1 white-text center-align"><h5>Longest Weird Substring</h5></div></div><br/>
+									<div class="row"><div id="myFormAnzahl"><b>Quantity of strings:</b><input  id="anzahl" type="text"></input></div></div>
+									<div class="row"><div id="myForm"></div></div>
+									<div class "row"><span>Link to exercise:   </span><a href="http://www.codechef.com/problems/LWS" target="_blank"><i class="tiny material-icons">label_outline</i>Go to Codechef.</a></div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="collapsible-header teal darken-2 white-text"><i class="material-icons">code</i><p>Help for the LWS-app</p></div>
+							<div class="collapsible-body container flow-text"><br/>
+								First you got this input field. Enter a number between 1 and 10. Then you will get that much new input fields. Here you have to enter a String. It's not case sensitive so you may use all letters. Don't enter numbers here, you will get an error message.
+								<br/><br/>
+								For more detailed information about what this does, please follow the link below the app, saying "Go to Codechef!"
+								<p/>
+							</div>
+						</li>
+						<li>
+							<div class="collapsible-header teal darken-2 white-text"><i class="material-icons">code</i><p>HTML-Part <b>lws.html</b></p></div>
+							<div class="collapsible-body">
+							<pre><p style="font-size:10px">&lt;html&gt;
+ &lt;head&gt;
+  &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; ref=&quot;materialize.min.css&quot; media=&quot;screen,projection&quot;/&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;/&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;script src=&quot;jquery-latest.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;materialize.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;lws.js&quot;&gt;&lt;/script&gt;
+  &lt;br/&gt;
+  &lt;div class=&quot;container&quot;&gt;
+   &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;card-panel teal lighten-1 white-text col l6 offset-l3 center-align&quot;&gt;
+     &lt;h3&gt;Longest Weird Substring&lt;/h3&gt;
+    &lt;/div&gt;
+   &lt;/div&gt;&lt;br/&gt;
+   &lt;div class=&quot;row&quot;&gt;
+    &lt;div class = &quot;col l3 offset-l3&quot; id=&quot;myFormAnzahl&quot;&gt;
+     &lt;b&gt;Quantity of strings:&lt;/b&gt;&lt;input  id=&quot;anzahl&quot; type=&quot;text&quot;&gt;&lt;/input&gt;
+    &lt;/div&gt;
+   &lt;/div&gt;
+   &lt;div class=&quot;row&quot;&gt;
+    &lt;div class = &quot;col l3 offset-l3&quot; id=&quot;myForm&quot;&gt;&lt;/div&gt;
+   &lt;/div&gt;
+  &lt;/div&gt;		
+ &lt;/body&gt;
+&lt;/html&gt;</p></pre>
+						</li>
+						<li>
+							<div class="collapsible-header teal darken-2 white-text"><i class="material-icons">code</i><p>Javascript-Part: <b>lws.js</b></p></div>
+							<div class="collapsible-body">
+							<pre><p style="font-size:10px">$(document).ready(function() {
+ $("#anzahl").keyup(function() {
+  var anz = $("#anzahl").val();
+  var i=0;
+  $("#myForm input").remove();
+  $("#myForm br").remove();
+  $("#myForm b").remove()
+  for (i=0;i<anz;i++) {
+   var newForm = document.createElement("input");
+   var newBreak = document.createElement("br");
+   var newBreak2 = document.createElement("br");
+   var cn = "text";
+   newForm.type = "text";
+   newForm.className = "text";
+   $("#myForm").append("&lt;b>String " +(i+1) + ":&lt;/b>&lt;/span>");
+   $("#myForm").append(newForm);
+   $("#myForm").append(newBreak);
+  }
+  $(".text").keyup(function() {
+   $(this).next(".texti").remove();
+   $(this).next(".brexi").remove();
+   var val = $(this).val();
+   var newText = "       &lt;b class=\"teal-text texti\">
+   Ergebnis:  " + lwsarray(val) + "&lt;/b>&lt;br class=\"brexi\">";
+   $(this).after(newText);
+  });
+ });
+});
+function lwsarray(strseq) {
+ var anz = $("#anzahl").val();
+ var i = 0;
+ var lwsar = new Array(26);
+ for(j=0;j&lt;26;j++) {
+  lwsar[j] = new Array(26);
+ }
+ var lwsarNeu = new Array(26);
+ for(j=0;j&lt;26;j++) {
+  lwsarNeu[j] = new Array(26);
+ }
+ for(i = 0; i&lt;26; i++) {
+  for(j=0; j&lt;26; j++) {
+   lwsar[i][j]=0;
+   lwsarNeu[i][j]=0;
+  }
+ }
+ for(i=1;i:&lt;=strseq.length;i++) {
+  var c = strseq.charCodeAt(i-1);
+  var ende = c-'a'.charCodeAt(0);
+  var max = 0;
+  var val = 0;
+  for(j=0;j:&lt;26;j++) {
+   max = 0;
+   for(k=0;k&lt;=ende;k++) {
+    val = lwsar[k][j];
+    lwsarNeu[k][j] = val;
+    max = Math.max(max, val);
+   }
+   lwsarNeu[ende][j] = max+1;
+   for (k=ende+1; k&lt;26; k++) {
+    lwsarNeu[k][j] = lwsar[k][j];
+   }
+  }
+  for (k=0; k&lt;26; k++) {
+   max = 0;
+   for (j=25; j>=ende; j--) {
+    val = lwsar[k][j];
+    lwsarNeu[k][j] = Math.max(val, lwsar[k][j]);                        
+    max = Math.max(max, val);
+   }
+   lwsarNeu[k][ende] = Math.max(max+1, lwsarNeu[k][ende]);
+   for (j=0; j&lt;ende; j++) {
+    lwsarNeu[k][j] = Math.max(lwsar[k][j], lwsarNeu[k][j]);
+   }
+  }
+  var vorr = new Array(26);
+  for(j=0;j&lt;26;j++) {
+   vorr[j] = new Array(26);
+  }
+  for(j=0;j&lt;26;j++) {
+   for(k=0;k&lt;26;k++) {
+    vorr[k][j] = lwsar[k][j];
+   }
+  }
+  for(j=0;j&lt;26;j++) {
+   for(k=0;k&lt;26;k++) {
+    lwsar[k][j] = lwsarNeu[k][j];
+   }
+  }
+  for(j=0;j&lt;26;j++) {
+   for(k=0;k&lt;26;k++) {
+    lwsarNeu[k][j] = vorr[k][j];
+   }
+  }
+  max = 0;
+  val = 0;
+  for(j=0;j&lt;26;j++) {
+   for(k=0;k&lt;26;k++) {
+    val = lwsar[k][j];
+    max = Math.max(max, val);
+   }
+  }
+ }
+ return max;
+}
+</p></pre></li>							
+							
+					</ul>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
+
+	
+	
