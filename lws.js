@@ -1,31 +1,50 @@
 $(document).ready(function() {
 	$("#anzahl").keyup(function() {
 		var anz = $("#anzahl").val();
+		var regi=/[0-9]/
+		var booli = regi.test(anz)
+		len = anz.length;
+		console.log(len);
 		var i=0;
 		$("#myForm input").remove();
 		$("#myForm br").remove();
 		$("#myForm b").remove()
-		for (i=0;i<anz;i++) {
-			var newForm = document.createElement("input");
-			var newBreak = document.createElement("br");
-			var newBreak2 = document.createElement("br");
-			var cn = "text";
-			newForm.type = "text";
-			newForm.className = "text";
-			$("#myForm").append("<b>String " +(i+1) + ":</b></span>");
-			$("#myForm").append(newForm);
-			$("#myForm").append(newBreak);
+		if (booli || len===0) {
+			for (i=0;i<anz;i++) {
+				var newForm = document.createElement("input");
+				var newBreak = document.createElement("br");
+				var newBreak2 = document.createElement("br");
+				var cn = "text";
+				newForm.type = "text";
+				newForm.className = "text";
+				$("#myForm").append("<b>String " +(i+1) + ":</b></span>");
+				$("#myForm").append(newForm);
+				$("#myForm").append(newBreak);
 			
+			}
+			$(".text").keyup(function() {
+				$(this).next(".texti").remove();
+				$(this).next(".brexi").remove();
+				var regi = /^[a-zA-Z]+$/;
+				var val = $(this).val();
+				var booli = regi.test(val);
+				var len = $(this).val().length;
+				if(len==0) {
+					var newText = "       <b class=\"teal-text texti\"></b><br class=\"brexi\">";
+				} else {
+					if(booli){
+						val = val.toLowerCase();	
+						var newText = "       <b class=\"teal-text texti\">Result:  " + lwsarray(val) + "</b><br class=\"brexi\">";
+					} else {
+						var newText = "       <b class=\"teal-text texti\">Error: Only letters a-Z are allowed!</b><br class=\"brexi\">";
+					}
+				}	
+				$(this).after(newText);
+			});} else {
+				$("#myForm").append("<b class=\"teal-text\">Not a Number!</b>")
 		}
-		$(".text").keyup(function() {
-			$(this).next(".texti").remove();
-			$(this).next(".brexi").remove();
-			var val = $(this).val();
-			var newText = "       <b class=\"teal-text texti\">Result:  " + lwsarray(val) + "</b><br class=\"brexi\">";
-			$(this).after(newText);
-		});
 	});
-});
+});	
 function lwsarray(strseq) {
 	var anz = $("#anzahl").val();
 	var i = 0;
