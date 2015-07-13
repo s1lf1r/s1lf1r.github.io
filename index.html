@@ -11,6 +11,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
 		<script src="javascript\lws.js"></script>
         <script src="javascript/brackets.js"></script>
+        <script type="text/javascript" src="javascript/gcd.js"></script>
 		<div class = "container">
 			<div class="row"></div>
 			<div class="row"></div>
@@ -66,6 +67,16 @@
                                 <div class="row"><div class="card-panel teal darken-2 white-text col l6 offset-l3 center-align"><h3>Brackets</h3></div></div><br/>
                                 <div class="row"><div class = "col l3 offset-l3" id="myFormAnzahl_ps"><b>Quantity of parentheses sequences:</b><input  id="anzahl_ps" type="text"></input></div></div>
                                 <div class="row"><div class = "col l3 offset-l3" id="myForm_ps"></div></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header teal darken-2 white-text"><i class="material-icons">subject</i><p>Greatest Common Divider</p></div>
+				            <div class="collapsible-body">
+                                <div class="container">
+                                    <div class="row"><div class="card-panel teal darken-2 white-text col l6 offset-l3 center-align"><h3>Greatest Common Divider</h3></div></div><br/>
+                                    <div class="row"><div class = "col l3 offset-l3" id="myFormAnzahl_gc"><b>Quantity of Numbers:</b><input  id="anzahl_gc" type="text"></input></div></div>
+                                    <div class="row"><div class = "col l3 offset-l3" id="myForm_gc"></div></div>
+                                </div>
                             </div>
                         </li>
 						<li>
@@ -293,6 +304,100 @@ function brackets(val) {
     return bracketstring;
 }
 </p></pre><p><a class ="white-text btn" href="javascript/brackets.js" download><i class="tiny material-icons">label_outline</i>download...</a></p></div></li>
+<li>
+							<div class="collapsible-header teal darken-2 white-text"><i class="material-icons">code</i><p>HTML-Part <b>gcd.html</b></p></div>
+							<div class="collapsible-body">
+							<pre><p style="font-size:10px" class="container">&lt;html&gt;
+	&lt;head&gt;
+		&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css&quot;&gt;
+		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;/&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;script type=&quot;text/javascript&quot; src=&quot;https://code.jquery.com/jquery-2.1.1.min.js&quot;&gt;&lt;/script&gt;
+		&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js&quot;&gt;&lt;/script&gt;
+		&lt;script type=&quot;text/javascript&quot; src=&quot;../javascript/gcd.js&quot;&gt;&lt;/script&gt;
+		&lt;div class=&quot;container&quot;&gt;
+			&lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;card-panel teal lighten-1 white-text col l6 offset-l3 center-align&quot;&gt;&lt;h3&gt;Greatest Common Divider&lt;/h3&gt;&lt;/div&gt;&lt;/div&gt;&lt;br/&gt;
+			&lt;div class=&quot;row&quot;&gt;&lt;div class = &quot;col l3 offset-l3&quot; id=&quot;myFormAnzahl_gc&quot;&gt;&lt;b&gt;Quantity of Numbers:&lt;/b&gt;&lt;input  id=&quot;anzahl_gc&quot; type=&quot;text&quot;&gt;&lt;/input&gt;&lt;/div&gt;&lt;/div&gt;
+			&lt;div class=&quot;row&quot;&gt;&lt;div class = &quot;col l3 offset-l3&quot; id=&quot;myForm_gc&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</p></pre><p><a class ="white-text btn" href="pages/gcd.html" download><i class="tiny material-icons">label_outline</i>download...</a></p></div>
+						</li>
+						<li>
+							<div class="collapsible-header teal darken-2 white-text"><i class="material-icons">code</i><p>Javascript-Part: <b>gcd.js</b></p></div>
+							<div class="collapsible-body">
+							<pre><p style="font-size:10px">$(document).ready(function() {
+ $(document).ready(function () {
+	$("#anzahl_gc").keyup(function () {
+		var anz = $("#anzahl_gc").val(), regi = /^[0-9]$/, booli = regi.test(anz), len = anz.length, i = 0;
+		$("#myForm_gc input").remove();
+		$("#myForm_gc br").remove();
+		$("#myForm_gc b").remove();
+		if (booli || len === 0) {
+			for (i = 0; i &lt; anz; i++) {
+				var newForm = document.createElement("input"),
+                    newBreak = document.createElement("br"),
+				    newBreak2 = document.createElement("br"),
+                    cn = "text";
+				newForm.type = "text";
+				newForm.className = i+1==anz?"text"+i+" text text_last":"text"+i+" text"
+				$("#myForm_gc").append("&lt;b>Number " + (i + 1)  + ":&lt;/b>&lt;/span>");
+				$("#myForm_gc").append(newForm);
+				$("#myForm_gc").append(newBreak);
+			
+			}
+			$(".text").keyup(function () {
+                var anz = $("#anzahl_gc").val();
+                var zahl = new Array(anz);
+                for(var i=0; i&lt;anz;i++){
+                    zahl[i]=1;
+                }
+                for(var i = 0; i&lt;anz; i++) {
+                    var z = $("#myForm_gc").find(".text"+i).val();
+                    zahl[i] = (z.length!=0 ? z : 1);
+                }
+                zahl = zahl.sort(function(a, b){return a-b});
+                for (i=0;i&lt;anz; i++) {
+                    console.log(zahl[i]);
+                }
+				$(".text").next(".texti_gc").remove();
+				$(".text").next(".brexi_gc").remove();
+				var regi = /^[0-9]+$/,
+                    val = $(this).val(),
+				    booli = regi.test(val),
+				    len = $(this).val().length;
+				if (len === 0) {
+					var newText = "       &lt;b class=\"teal-text texti_gc\">&lt;/b>&lt;br class=\"brexi_gc\">";
+				} else {
+					if (booli) {
+						var newText = "       &lt;b class=\"teal-text texti_gc\">Result:  " + gcd(zahl, anz) + "&lt;/b>&lt;br class=\"brexi_gc\">";
+					} else {
+						var newText = "       &lt;b class=\"teal-text texti_gc\">Error: Only Numbers are allowed!&lt;/b>&lt;br class=\"brexi_gc\">";
+					}
+				}
+				$(".text_last").after(newText);
+			}); 
+        } else {
+            $("#myForm_gc").append("&lt;b class=\"teal-text\">Not a Number!&lt;/b>")
+		}
+	});
+    function gcd_ab(a, b) {
+        while (b > 0)
+        {
+            var temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+    function gcd(z, a) {
+        var result = z[0];
+        for(var i = 1; i &lt; a; i++) result = gcd_ab(result, z[i]);
+        return result;
+    }
+});
+</p></pre><p><a class ="white-text btn" href="javascript/gcd.js" download><i class="tiny material-icons">label_outline</i>download...</a></p></div></li>
 						<li>
 							<div class="collapsible-header teal darken-2 white-text"><i class="material-icons">perm_identity</i><p>Short CV</p></div>
 							<div class="collapsible-body flow-text container">
